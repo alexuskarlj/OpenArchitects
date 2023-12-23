@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Link to the external CSS stylesheet -->
+    <link rel="stylesheet" href="/app/static/css/styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="navbar-container">
+            <nav class="navbar-nav">
+                <!-- Navigation Links -->
+                <a href="#" id="admin-home" class="nav-link">Admin Home</a>
+                <a href="#" id="return-portal" class="nav-link">Return to Portal</a>
+                <a href="#" id="logout" class="nav-link">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Dashboard Section -->
+    <div id="main-dashboard">
+        <!-- Admin Dashboard Heading -->
+        <div class="header">
+            <!-- Heading for Admin Dashboard -->
+            <h1>Admin Dashboard</h1>
+        </div>
+
+        <!-- Data Cards Section -->
+        <div id="data-cards" class="data-cards card-container">
+            <!-- Data Card 1 (Dashboard Count) -->
+            <div class="data-card">
+                <h3 id="dashboard-count">Loading...</h3>
+                <p>Dashboards</p>
+                <!-- More Info Link with Arrow Icon -->
+                <a href="#" class="more-info">
+                    <span>More info</span>
+                    <img src="/app/static/images/arrow.png" alt="Arrow" class="arrow-icon">
+                </a>
+            </div>
+
+            <!-- Data Card 2 (User Count) -->
+            <div class="data-card">
+                <h3 id="user-count">Loading...</h3>
+                <p>Users</p>
+                <!-- More Info Link with Arrow Icon -->
+                <a href="#" class="more-info">
+                    <span>More info</span>
+                    <img src="/app/static/images/arrow.png" alt="Arrow" class="arrow-icon">
+                </a>
+            </div>
+
+            <!-- Data Card 3 (Organizations / Schools Count) -->
+            <div class="data-card">
+                <h3 id="org-schools-count">Loading...</h3>
+                <p>Organizations / Schools</p>
+                <!-- More Info Link with Arrow Icon -->
+                <a href="#" class="more-info">
+                    <span>More info</span>
+                    <img src="/app/static/images/arrow.png" alt="Arrow" class="arrow-icon">
+                </a>
+            </div>
+
+            <!-- Data Card 4 (Logins / Views Count) -->
+            <div class="data-card">
+                <h3 id="logins-views-count">Loading...</h3>
+                <p>Logins / Views</p>
+                <!-- More Info Link with Arrow Icon -->
+                <a href="#" class="more-info">
+                    <span>More info</span>
+                    <img src="/app/static/images/arrow.png" alt="Arrow" class="arrow-icon">
+                </a>
+            </div>
+        </div>
+
+        <!-- Tables Container Section -->
+        <div class="tables-container">
+            <!-- Recent Logins Section -->
+            <div class="recent-logins-card">
+                <h2><img src="/app/static/images/recent-login.png" alt="Recent Logins Icon"> Recent Logins</h2>
+                <table id="recent-logins-table">
+                    <!-- Table Head -->
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Organization</th>
+                            <th>Timestamp</th>
+                        </tr>
+                    </thead>
+                    <!-- Table Body (Data will be inserted here) -->
+                    <tbody id="logins-tbody">
+                        <!-- Data will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        
+            <!-- Recent Dashboard Views Section -->
+            <div class="recent-views-section">
+                <h2><img src="/app/static/images/recent-dashboard.png" alt="Recent Dashboard Views Icon"> Recent Dashboard Views</h2>
+                <table id="recent-views-table">
+                    <!-- Table Head -->
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Organization</th>
+                            <th>Dashboard</th>
+                            <th>Timestamp</th>
+                        </tr>
+                    </thead>
+                    <!-- Table Body (Data will be inserted here) -->
+                    <tbody id="views-tbody">
+                        <!-- Data will be inserted here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Include your main.js script for functionality -->
+    <script src="/app/static/js/main.js"></script>
+</body>
+</html>

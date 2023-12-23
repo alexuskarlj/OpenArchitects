@@ -1,0 +1,196 @@
+/* Reset some default styles for body and html */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Style for the navigation bar */
+.navbar {
+    background: url('/app/static/images/banner-bar.png') no-repeat; /* Background image */
+    background-size: cover;
+    padding: 10px 0;
+}
+
+.navbar nav {
+    justify-content: space-between; /* Horizontally space navigation items */
+    align-items: center; /* Vertically align navigation items */
+}
+
+.navbar a {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 12px;
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 15px;
+}
+
+.navbar a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Styling for header text */
+.header h1 {
+    color: #282828;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-left: 20px;
+}
+
+/* Container for cards */
+.card-container {
+    display: flex;
+    justify-content: space-between; /* Space between cards */
+}
+
+/* Styling for individual data cards */
+.data-card {
+    position: relative;
+    flex: 1;
+    max-width: calc(33.33% - 20px); /* Adjust card width */
+    height: 180px;
+    border-radius: 4px;
+    background: #17A2B8;
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.13);
+    margin-right: 5px;
+    margin-left: 5px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.data-card h3 {
+    color: #FFF;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+}
+
+.data-card p {
+    color: #FFF;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    margin-top: 5px;
+    padding: 0;
+    align-self: flex-start;
+}
+
+/* Styling for the "More Info" button */
+.more-info {
+    display: inline-block;
+    position: relative;
+    padding-right: 30px;
+    height: 30px;
+    background: #1591A5;
+    background-size: 20px auto;
+    color: #FFF;
+    line-height: 30px;
+    border-radius: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Styling for the arrow icon inside the button */
+.arrow-icon {
+    width: 12px;
+    height: auto;
+    margin-left: 1px;
+    vertical-align: middle;
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
+    .data-card {
+        max-width: 100%; /* Adjust card width for smaller screens */
+        margin-right: 0;
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* Styling for tables container */
+.tables-container {
+    display: flex;
+    justify-content: space-between; /* Space between tables */
+    overflow-x: auto; /* Horizontal scrolling if tables don't fit */
+    font-size: 12px; /* Adjust font size for tables */
+    margin-bottom: 20px; /* Add space at the bottom */
+}
+
+/* Styling for recent logins and recent views sections */
+.recent-logins-card,
+.recent-views-section {
+    flex: 1; /* Equal width for each section */
+    margin: 10px; /* Margin around sections */
+    border: 1px solid #ccc; /* Border color */
+    padding: 20px; /* Padding inside the card */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    max-width: calc(50% - 20px); /* Adjust max width considering margin */
+    overflow-y: auto; /* Vertical scrolling if content is long */
+}
+
+/* Add a divider line below the <h2> headings in recent logins and recent views */
+.recent-logins-card h2,
+.recent-views-section h2 {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+/* Styling for icons inside recent logins and recent views */
+.recent-logins-card img,
+.recent-views-section img {
+    margin-right: 5px;
+    max-width: 12px;
+    max-height: 12px;
+}
+
+/* Styling for tables */
+#recent-logins-table,
+#recent-views-table {
+    width: 100%;
+    border-collapse: collapse; /* Remove space between borders */
+}
+
+#recent-logins-table th,
+#recent-logins-table td,
+#recent-views-table th,
+#recent-views-table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Responsive design for smaller screens */
+@media screen and (max-width: 768px) {
+    .tables-container {
+        flex-direction: column; /* Stack tables on small screens */
+    }
+
+    .recent-logins-card,
+    .recent-views-section {
+        max-width: 100%; /* Full width on small screens */
+    }
+}
